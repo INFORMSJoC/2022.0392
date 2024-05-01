@@ -11,9 +11,9 @@ The software and data in this repository are a snapshot of the software and data
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-XXX DOI Link for paper
+https://doi.org/10.1287/ijoc.2022.0392
 
-XXX DOI Link for codes
+https://doi.org/10.1287/ijoc.2022.0392.cd
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
@@ -23,7 +23,7 @@ Below is the BibTex for citing this snapshot of the respoitory.
   publisher =     {INFORMS Journal on Computing},
   title =         {Efficient Nested Simulation Experiment Design via the Likelihood Ratio Method},
   year =          {2024},
-  doi =           {XXX some DOI},
-  url =           {XXX Github link},
+  doi =           {10.1287/ijoc.2022.0392.cd},
+  url =           {Available for download at https://github.com/mbfeng/2022.0392/},
 }
 ```
