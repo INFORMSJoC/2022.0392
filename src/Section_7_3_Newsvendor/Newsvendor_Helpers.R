@@ -19,7 +19,7 @@ lr2_poisson <- function(lambda_t, lambda_s) {
 }
 
 lr2_poisson_sim <- function(lambda_t, lambda_s, n_reps = 1e6) {
-  # simulate the second moment of likelihood ratios for Poission distributions
+  # compute the sample second moment of likelihood ratios for Poission distributions
   # whose means are lambda_t and lambda_s for the target and sampling
   # distributions, resp.
   # Input:
@@ -35,7 +35,7 @@ lr2_poisson_sim <- function(lambda_t, lambda_s, n_reps = 1e6) {
 }
 
 psi_mat_poisson <- function(lambda_t, lambda_s = NULL) {
-  # Matrix of the inverses of the expected values of squared likelihood ratios
+  # Matrix of the reciprocals of the second moments of the likelihood ratios
   # for Poisson distributions whose means equal to lambda_t and lambda_s
   # Input:
   # lambda_t, lambda_s: matrices of (non-negative) means, n_dim values in each
