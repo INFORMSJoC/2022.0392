@@ -4,7 +4,8 @@
 # Straddle option portfolio that consists of a long call and a long put        #
 # Optimized nested simulation for enterprise risk management (ERM) example     #
 # -- straddle option (long call + long put,the same strike for both options)   #
-# This script produces Figure 1 & Figure 2 in Section 7.2 of the paper.        #
+# This script runs simulations and produces Figure 1 & Figure 2 in Section 7.2 #
+# of the paper.                                                                #
 ################################################################################
 
 #-- Clear the workspace and load the necessary libraries
@@ -338,3 +339,5 @@ filename <- sprintf(
   n_inner, n_outer, n_macro
 )
 save.image(filename)
+
+save(df_plt, df_plt2, file = "SingleAssetERM_Figure1_Figure2.RData")
