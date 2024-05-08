@@ -64,3 +64,4 @@ Figure 1 in the paper shows the results of the multiplication test with differen
 values of K using `gcc` 7.5 on an Ubuntu Linux box.
 
 ![Figure 1](results/Section_7_1_SingleAssetERM/OuterDist.pdf)
+
