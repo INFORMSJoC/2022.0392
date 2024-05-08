@@ -60,8 +60,15 @@ src\Section_7_3_Newsvendor\Newsvendor_SimBudgetGrowth.R # produces Figure 3(b) i
 ```
 
 ## Results
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+Sample results are in the results sub-directory. For instance,
+```
+results\Section_7_1_SingleAssetERM\OuterDist.pdf # Figure 1(a) in Section 7.1
+results\Section_7_1_SingleAssetERM\ConditionalMean.pdf # Figure 1(b) in Section 7.1
+results\Section_7_1_SingleAssetERM\ERM_All_RedGreen.pdf # Figure 2(a) in Section 7.1
+results\Section_7_1_SingleAssetERM\ERM_Zoomed_RedGreen.pdf # Figure 2(b) in Section 7.1
+results\Section_7_3_Newsvendor\VarRatio.pdf # Figure 3(b) in Section 7.3
+results\Section_7_3_Newsvendor\SimBudgetGrowth.pdf # Figure 3(b) in Section 7.3
+```
 
-![Figure 1](results/Section_7_1_SingleAssetERM/OuterDist.pdf)
-
+## Replicating
+Please follow the instructions in the "Build" section to replicate results in the paper.
