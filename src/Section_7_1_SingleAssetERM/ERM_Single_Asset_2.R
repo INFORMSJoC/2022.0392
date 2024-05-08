@@ -10,7 +10,8 @@ rm(list = ls())
 library(lpSolve) # for solving LP (e.g., Eq. (11) in the paper)
 library(latex2exp) # for TeX expressions
 library(ggplot2) # for plotting
-library(dplyr) # for data manipulations
+library(dplyr) # for data manipulations (for plotting)
+library(tidyverse) # for data manipulations (for plotting)
 source("NestedSim_ERM_Helpers.R") # helper functions
 
 #-- Black-Scholes model parameters
@@ -269,22 +270,22 @@ df_tbl1 %>%
   filter(ErrorType == "MSE", grepl("indicator", RiskType)) %>%
   spread(RiskType, Val) %>%
   select(
-    n_inner_outer, Indicator_OptNested, Indicator_StdNested,
-    Indicator_StdPlus, Indicator_RegNested
+    n_inner_outer, indicator_OptNested, indicator_StdNested,
+    indicator_StdPlus, indicator_RegNested
   )
 df_tbl1 %>%
   filter(ErrorType == "MSE", grepl("hockeystick", RiskType)) %>%
   spread(RiskType, Val) %>%
   select(
-    n_inner_outer, HockeyStick_OptNested, HockeyStick_StdNested,
-    HockeyStick_StdPlus, HockeyStick_RegNested
+    n_inner_outer, hockeystick_OptNested, hockeystick_StdNested,
+    hockeystick_StdPlus, hockeystick_RegNested
   )
 df_tbl1 %>%
   filter(ErrorType == "MSE", grepl("square", RiskType)) %>%
   spread(RiskType, Val) %>%
   select(
-    n_inner_outer, Square_OptNested,
-    Square_StdNested, Square_StdPlus, Square_RegNested
+    n_inner_outer, square_OptNested,
+    square_StdNested, square_StdPlus, square_RegNested
   )
 
 filename <- sprintf("SingleAssetERM_2_%dCases%dMacros.RData", n_cases, n_macro)

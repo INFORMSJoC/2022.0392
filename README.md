@@ -27,3 +27,40 @@ Below is the BibTex for citing this snapshot of the respoitory.
   url =           {Available for download at https://github.com/mbfeng/2022.0392/},
 }
 ```
+
+## Description
+The goal of this software is to demonstrate the effectiveness of the optimal likelihood-ratio nested simulation design, as proposed in the paper, comparing to other nested simulation designs in various applications.
+
+## Building
+R is required to run source codes included. Please see requirements.txt and install the required R libraries. In May 2024, the authors used the following version of R:
+
+R version 4.3.3 (2024-02-29 ucrt) -- "Angel Food Cake"
+
+The library versions are the ones used by the authors in May, 2024.
+
+For the single-asset enterprise risk management (ERM) example in Section 7.1 of the paper, run the following scripts:
+```
+src\Section_7_1_SingleAssetERM\ERM_Single_Asset_1.R # produces Figure 1 & Figure 2 in Section 7.1
+src\Section_7_1_SingleAssetERM\ERM_Single_Asset_2.R # produces Table 1 in Section 7.1
+```
+
+For the multi-asset enterprise risk management (ERM) example in Section 7.2 of the paper, the user should take three steps:
+1. Set the directory in line 20 of src\Section_7_2_MultiAssetERM\MultiAssetERM_main.R
+2. Run the following shell script
+```
+src\Section_7_2_MultiAssetERM\runfile.sh
+```
+3. Run the script src\Section_7_2_MultiAssetERM\MultiAssetERM_postprocessing.R in the directory set in step 1, which produces Table 2 and Table 3 in Section 7.2 of the paper.
+
+For the newsvendor example in Section 7.3 of the paper, run the following scripts:
+```
+src\Section_7_3_Newsvendor\Newsvendor_NestedSim.R # produces Table 4 in Section 7.3
+src\Section_7_3_Newsvendor\Newsvendor_VarRatio.R # produces Figure 3(a) in Section 7.3
+src\Section_7_3_Newsvendor\Newsvendor_SimBudgetGrowth.R # produces Figure 3(b) in Section 7.3
+```
+
+## Results
+Figure 1 in the paper shows the results of the multiplication test with different
+values of K using `gcc` 7.5 on an Ubuntu Linux box.
+
+![Figure 1](results/Section_7_1_SingleAssetERM/OuterDist.pdf)

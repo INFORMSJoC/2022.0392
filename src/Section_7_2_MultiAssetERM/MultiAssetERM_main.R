@@ -17,7 +17,7 @@ library(randcorr) # simulate random correlation matrix
 source("MultiAssetERM_helpers.R") # helper functions
 
 #-- set a working directory for saving results
-setwd("/u/mbfeng/BenResearch/IJOC_Github/ERM_Multi_Assets")
+setwd("/src/Section_7_1_SingleAssetERM")
 #-- set seeds, run simulations, save file
 args <- commandArgs() # get command line arguments
 seed_number <- as.numeric(tail(args, n = 1)) # use above argument to set  seed
