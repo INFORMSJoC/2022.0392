@@ -1,0 +1,10 @@
+Required R libraries include:
+
+lpSolve 5.6.20 # for solving LP (e.g., Eq. (11) in the paper)
+lpSolveAPI 5.5.2.0-17.11 # for solving LP (e.g., Eq. (11) in the paper)
+latex2exp 0.9.6 # for TeX expressions
+ggplot2 3.4.4 # for plotting
+dplyr 1.1.4 # for data manipulations (for plotting)
+tidyverse 2.0.0 # for data manipulations (for plotting)
+mvtnorm 1.2-4 # bivariate normal pdf for closed-form barrier option price
+randcorr 1.0 # simulate random correlation matrix

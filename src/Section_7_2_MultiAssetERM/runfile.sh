@@ -1,0 +1,1 @@
+seq 2001 2025 | parallel -j 25 'Rscript MultiAssetERM_main.R {} > output_fast{}.log 2>&1'
