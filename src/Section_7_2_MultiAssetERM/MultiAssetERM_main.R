@@ -16,6 +16,11 @@ library(mvtnorm) # bivariate normal pdf for closed-form barrier option price
 library(randcorr) # simulate random correlation matrix
 source("MultiAssetERM_helpers.R") # helper functions
 
+# fixed seed for reproducibility. specifically, this paper does not explicitly
+# consider input uncertainty. So we use the same correlation matrix for all
+# macro replications across all threads on the server.
+set.seed(2023)
+
 #-- set a working directory for saving results
 setwd("/src/Section_7_1_SingleAssetERM")
 #-- set seeds, run simulations, save file
